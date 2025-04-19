@@ -2,17 +2,56 @@
 
 ## [GitHub Repository](https://github.com/Liz-Melcher/socialnetworkAPI)
 
-## [Video Walk Through])()
+## [Video Walk Through]()
 
 ## Description
 
 ## Installation 
 
+
+
+Route: 
+A route defines what an endpoint is called.
+A route defines the URLs and the HTTP methods 
+Controller: 
+A controller defines what happens when the endpoint is hit. 
+Examples are querying a database, validating a database request, sending a response 
+
+data.ts contains mock users and thoughts
+seed.ts inserts the mock data into MongoDB
+
+## Testing
+
+Get all users
+GET http://localhost:3001/api/users
+
+Get all thoughts
+GET http://localhost:3001/api/thoughts
+
+Get a single user
+GET http://localhost:3001/api/users/<userId>
+
+Create a new thought
+POST http://localhost:3001/api/thoughts
+
+Body (JSON):
+{
+  "thoughtText": "we're getting there",
+  "username": "coolcoder",
+  "userId": "<68042472103095d7e87370a6>"
+}
+
+Add a Friend
+POST http://localhost:3001/api/users/<userId>/friends/<friendId>
+
+
 ## License
 MIT License 
 
 ## Contributing: There was no starter code for this project.
-The original instructions for the project are: 
+
+
+The original instructions for the project are as follows: 
 # 17 NoSQL: Social Network API
 
 ## Your Task

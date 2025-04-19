@@ -1,9 +1,11 @@
+// routes/api/index.ts
 import { Router } from 'express';
-const router = Router();
-import postRoutes from './postRoutes.js';
 import userRoutes from './userRoutes.js';
+import thoughtRoutes from './thoughtRoutes.js';
 
-router.use('/posts', postRoutes);
+const router = Router();
+
 router.use('/users', userRoutes);
+router.use('/thoughts', thoughtRoutes);
 
 export default router;

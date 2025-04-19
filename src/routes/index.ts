@@ -1,11 +1,11 @@
+// routes/index.ts
 import { Router } from 'express';
-const router = Router();
-import apiRoutes from './api/index.js';
+import apiRoutes from './api';
 
+const router = Router();
+
+// Mount all /api routes
 router.use('/api', apiRoutes);
 
-router.use((_req, res) => {
-  return res.send('Wrong route!');
-});
 
 export default router;

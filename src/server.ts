@@ -1,23 +1,20 @@
 import express from 'express';
 import db from './config/connection.js';
-import routes from './routes/index.js';
+import routes from './routes/api/index.js'; // or './routes' if you're using a top-level routes/index.ts
 
-const cwd = process.cwd();
-
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Note: not necessary for the Express server to function. This just helps indicate what activity's server is running in the terminal.
-const activity = cwd.includes('01-Activities')
-  ? cwd.split('01-Activities')[1]
-  : cwd;
-
+// Middleware to handle form data and JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
 
+// Mount all API routes under /api
+app.use('/api', routes);
+
+// Start the server after DB connects
 db.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`API server for ${activity} running on port ${PORT}!`);
+    console.log(`🚀 Social Network API running on port ${PORT}`);
   });
 });
