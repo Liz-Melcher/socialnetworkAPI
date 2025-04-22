@@ -28,7 +28,7 @@ const reactionSchema = new Schema<IReaction>(
     reactionBody: {
       type: String,
       required: true,
-      maxlength: 280, //Max character length from insturctions 
+      maxlength: 280, //Max character length from instructions 
     },
     username: {
       type: String,

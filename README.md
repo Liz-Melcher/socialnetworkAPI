@@ -29,7 +29,7 @@ Get all thoughts
 GET http://localhost:3001/api/thoughts
 
 Get a single user
-GET http://localhost:3001/api/users/<userId>
+GET http://localhost:3001/api/users/6807017fac82fa1c4f9e22be
 
 Create a new thought
 POST http://localhost:3001/api/thoughts
@@ -38,7 +38,7 @@ Body (JSON):
 {
   "thoughtText": "we're getting there",
   "username": "coolcoder",
-  "userId": "<68042472103095d7e87370a6>"
+  "userId": "68042472103095d7e87370a6"
 }
 
 Add a Friend
