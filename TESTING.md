@@ -25,54 +25,59 @@ Body:
 }
 ```
 
-Add a Friend
-POST http://localhost:3001/api/users/{userid}/friends/{friendid}
+## Add a Friend
+`POST http://localhost:3001/api/users/{userid}/friends/{friendid}`
 
-Create a new user
-POST http://localhost:3001/api/users
+## Create a new user
+`POST http://localhost:3001/api/users`
 
 Body (JSON):
+```
 {
   "username": "new_user123",
   "email": "newuser123@example.com"
 }
-
-Add a reaction to a thought
-POST http://localhost:3001/api/thoughts/{thoughtid}/reactions
+``` 
+##  Add a reaction to a thought
+`POST http://localhost:3001/api/thoughts/{thoughtid}/reactions`
 
 Body (JSON):
-{
+```{
   "reactionBody": "Awesome thought!",
   "username": "node_ninja"
 }
+```
 
-
-Update a user to change email
-PUT http://localhost:3001/api/users/{userid}
+## Update a user to change email
+`PUT http://localhost:3001/api/users/{userid}`
 
 user id 
 Body (JSON):
+```
 {
   "email": "updatedemail@example.com"
 }
+```
 
-Update a thought
-PUT http://localhost:3001/api/thoughts/{thoughtid}
+##  Update a thought
+`PUT http://localhost:3001/api/thoughts/{thoughtid}`
 
 Body (JSON):
+```
 {
   "thoughtText": "Updated thought text goes here!"
 }
+```
 
-Delete a thought
-DELETE http://localhost:3001/api/thoughts/{thoughtid}
+##  Delete a thought
+`DELETE http://localhost:3001/api/thoughts/{thoughtid}`
 
-Remove a reaction
-DELETE http://localhost:3001/api/thoughts/{thoughtid}/reactions/{reactionId}
+## Remove a reaction
+`DELETE http://localhost:3001/api/thoughts/{thoughtid}/reactions/{reactionId}`
 
-Remove a friend
-DELETE http://localhost:3001/api/users/{userid}/friends/{friendid}
+## Remove a friend
+`DELETE http://localhost:3001/api/users/{userid}/friends/{friendid}`
 
-Delete a user 
-DELETE http://localhost:3001/api/users/{userid}
+## Delete a user 
+`DELETE http://localhost:3001/api/users/{userid}`
 

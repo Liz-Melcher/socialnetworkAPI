@@ -1,7 +1,7 @@
 # socialnetworkAPI
 
 - [GitHub Repository](https://github.com/Liz-Melcher/socialnetworkAPI)
-- [Video Walk Through]()
+- [Video Walk Through](https://youtu.be/Szi9KMks5Cc)
 
 ## Description
 
